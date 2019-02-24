@@ -69,3 +69,6 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 ### Contract Address
     Testnet Ropsten: 0xe45E25E4C429c714B3F97b3d44f1cf4047355f42
+
+### Medium Post
+    https://hackernoon.com/the-right-way-to-develop-your-ethereum-dapp-is-here-drizzle-a633af45f031
