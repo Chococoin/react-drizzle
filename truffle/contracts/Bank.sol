@@ -1,6 +1,6 @@
 pragma solidity ^0.5.0;
 
-contract Token {
+contract Bank {
     address public bank;
     address[] Holder; 
     uint256 public tokenSupply;
