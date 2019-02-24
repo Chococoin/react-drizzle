@@ -4,9 +4,14 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import { Drizzle, generateStore } from 'drizzle';
+import Bank from './contracts/Bank.json'
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
+const options = { contracts: [Bank] };
+
+const drizzleStore = generateStore(options);
+const drizzle = new Drizzle(options, drizzleStore)
+
+ReactDOM.render(<App drizzle={drizzle}/>, document.getElementById('root'));
+
 serviceWorker.unregister();
