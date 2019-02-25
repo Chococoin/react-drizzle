@@ -6,7 +6,8 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      loading: ''
+      loading: '',
+      drizzleState: ''
     }
   }
 
@@ -32,7 +33,10 @@ class App extends Component {
         if (this.state.loading) return "Loading Drizzle...";
         return <div className="App">
                   Drizzle is ready
-                  <ReadBank />
+                  <ReadBank 
+                    drizzle={this.props}
+                    drizzleState={this.state.drizzleState}  
+                  />
                </div>;
   }
 }

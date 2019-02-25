@@ -4,12 +4,14 @@ class ReadBank extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      amount: ''
+      amount: '',
+      data: this.props.drizzle,
+      variables: this.props.drizzleState
     }
   }
 
   componentWillMount(){
-    console.log(this.props);
+    console.log(this.state.data.variables)
   }
 
   render(){
